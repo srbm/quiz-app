@@ -4,6 +4,7 @@
         <title>Kentucky History Quiz</title>
         <meta type="description" value="">
         <meta>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -18,7 +19,7 @@
                     <button type="button">Tip Off</button>
                 </div>
             </section>
-            <section role="form">
+            <section role="form" class="quiz">
                 <form action="#" method="POST">
                     <fieldset>
                         <h3>Question Number</h3>
@@ -33,6 +34,11 @@
                     <p>You are on question 1.</p>
                     <p>Score: 0/1</p>
                 </div>
+            </section>
+            <section role="note" class="result">
+                <p>You got it right!</p>
+                <p>Your score is: 1/1 = 100%</p>
+                <button type="button">Next Question</button>            
             </section>
         </main>
         <footer>

@@ -1,0 +1,30 @@
+header, section {
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
+}
+.quiz {
+    border: 1px solid grey;
+    width: 80%;
+    margin: 0 auto;
+}
+fieldset {
+    border: none;
+}
+label {
+    display: block;
+    padding: 15px 30px;
+    margin: 10px auto;
+    width: 70%;
+    border: 1px solid grey;
+    text-align: left;
+}
+input {
+    margin-right: 10px;
+}
+
+.result {
+    border: 1px solid grey;
+    width: 60%;
+    margin: inherit auto;
+}
