@@ -1,0 +1,47 @@
+$wildcatBlue: #0033A0;
+$wildcatWhite: #ffffff;
+$wildcatBlack: #2C2A29;
+$fontSerif: 'Lora', serif;
+$fontSans: 'Muli', sans-serif;
+body {
+    box-sizing: border-box;
+    font-family: $fontSans;
+    background-color: $wildcatBlue;
+    color: $wildcatWhite;
+}
+header, section, footer {
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
+}
+h1 {
+    font-family: $fontSerif;
+}
+.quiz {
+    border: 1px solid $wildcatBlack;
+    width: 80%;
+    margin: 0 auto;
+}
+fieldset {
+    border: none;
+}
+label {
+    display: block;
+    padding: 15px 30px;
+    margin: 10px auto;
+    width: 70%;
+    border: 1px solid $wildcatBlack;
+    text-align: left;
+}
+input {
+    margin-right: 10px;
+}
+
+.result {
+    border: 1px solid $wildcatBlack;
+    width: 60%;
+    margin: inherit auto;
+}
+button {
+    margin: 1em;
+}
