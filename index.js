@@ -21,6 +21,15 @@ function displayQuestion(questionIndex) {
     console.log(`displayQuestion ran`);
     $('.question-number').text(`${questionIndex+1}. ${questionsAnswers[questionIndex].question}`)
 }
+function displayAnswers(questionIndex) {
+    console.log(`displayAnswers ran`);
+    const choices = [];
+    const answersObj = questionsAnswers[questionIndex].answers;    
+    for (const answer in answersObj) {
+        choices.push(`<label><input type="radio" name="choice" value="${answersObj[answer]}" required>${answersObj[answer]}</label>`);   
+    }
+    $('.choices').append(choices);
+}
 
 
 
@@ -37,6 +46,7 @@ function handleQuizAppFuncions() {
     hideSections();
     handleButtonClick();
     displayQuestion(0);
+    displayAnswers(0);
 }
 
 $(handleQuizAppFuncions())
