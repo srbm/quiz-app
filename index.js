@@ -1,8 +1,8 @@
 function handleButtonClick() {
-    console.log(`handleButtonClick ran`);
     //target button clicked
     //on click
     $('.start-button').on('click', e => {
+        console.log(`handleButtonClick ran`);
         //prevent default
         e.preventDefault();
         //hide intro
@@ -17,6 +17,10 @@ function hideSections() {
     $('.quiz, .result').hide();
 }
 
+function displayQuestion(questionIndex) {
+    console.log(`displayQuestion ran`);
+    $('.question-number').text(`${questionIndex+1}. ${questionsAnswers[questionIndex].question}`)
+}
 
 
 
@@ -32,6 +36,7 @@ function hideSections() {
 function handleQuizAppFuncions() {
     hideSections();
     handleButtonClick();
+    displayQuestion(0);
 }
 
 $(handleQuizAppFuncions())
