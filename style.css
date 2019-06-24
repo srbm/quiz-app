@@ -1,13 +1,30 @@
-body {
+body, * {
   box-sizing: border-box;
   font-family: "Muli", sans-serif;
   background-color: #0033A0;
   color: #ffffff; }
 
-header, section, footer {
+section, footer {
   text-align: center;
   width: 60%;
   margin: 30px auto; }
+
+header {
+  width: 100%;
+  padding: 15px 30px;
+  text-align: center; }
+  header .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .logos img {
+      height: 80px; }
+    header .logos p {
+      font-family: "Lora", serif;
+      font-size: 2em;
+      border: 1px solid #ffffff;
+      padding: 5px 10px; }
 
 h1 {
   font-family: "Lora", serif; }

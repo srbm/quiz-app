@@ -3,16 +3,37 @@ $wildcatWhite: #ffffff;
 $wildcatBlack: #2C2A29;
 $fontSerif: 'Lora', serif;
 $fontSans: 'Muli', sans-serif;
-body {
+body, * {
     box-sizing: border-box;
     font-family: $fontSans;
     background-color: $wildcatBlue;
     color: $wildcatWhite;
 }
-header, section, footer {
+section, footer {
     text-align: center;
     width: 60%;
     margin: 30px auto;
+}
+header {
+    width: 100%;
+    padding:  15px 30px;
+    text-align: center;
+    .logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            height: 80px;
+        }
+        p {
+            font-family: $fontSerif;
+            font-size: 2em;
+            border: 1px solid $wildcatWhite;
+            padding: 5px 10px;
+        }
+    }
+    
 }
 h1 {
     font-family: $fontSerif;
