@@ -25,13 +25,14 @@
             </section>
             <section role="form" class="quiz">
                 <form action="#" method="POST">
-                    <fieldset class="choices">
+                    <fieldset>
                         <h3 class="question-number"></h3>
+                        <div class="choices"></div>
                         <!-- <label><input type="radio" name="choice" value="answer choice lorem impsum value goes here" required>answer choice lorem impsum value goes here</label>
                         <label><input type="radio" name="choice" value="answer choice lorem impsum value goes here" required>answer choice lorem impsum value goes here</label>
                         <label><input type="radio" name="choice" value="answer choice lorem impsum value goes here" required>answer choice lorem impsum value goes here</label>
                         <label><input type="radio" name="choice" value="answer choice lorem impsum value goes here" required>answer choice lorem impsum value goes here</label> -->
-                        <button type="submit">Select</button>
+                        <button type="submit" class="select">Select</button>
                     </fieldset>
                 </form>
                 <div class="progress">
@@ -40,8 +41,9 @@
                 </div>
             </section>
             <section role="note" class="result">
-                <p>You got it right!</p>
-                <p>Your score is: 1/1 = 100%</p>
+                <div class="result__info">
+
+                </div>
                 <button type="button">Next Question</button>            
             </section>
         </main>

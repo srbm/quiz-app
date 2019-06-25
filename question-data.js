@@ -4,10 +4,10 @@ const questionsAnswers = [
         answers: {
             a: '1948',
             b: '1955',
-            c: '1955',
+            c: '1956',
             d: '1978'
         },
-        correct: 'a'
+        correct: '1948'
     },
     {
         question: 'How many number 1 NBA draft picks does Kentucky have with John Calipari?',

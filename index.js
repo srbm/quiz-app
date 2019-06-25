@@ -26,15 +26,31 @@ function displayAnswers(questionIndex) {
     const choices = [];
     const answersObj = questionsAnswers[questionIndex].answers;    
     for (const answer in answersObj) {
-        choices.push(`<label><input type="radio" name="choice" value="${answersObj[answer]}" required>${answersObj[answer]}</label>`);   
+        choices.push(
+            `<label>
+                <input type="radio" name="choice" value="${answersObj[answer]}" required>${answersObj[answer]}
+            </label>`);   
     }
     $('.choices').append(choices);
 }
-
-
-
-
-
+function checkAnswer(questionIndex) {
+        return ($('input:checked').val() === questionsAnswers[questionIndex].correct) 
+}
+function displayResult(bool) {
+    $('.quiz').hide();
+    if (bool) {
+        $('.result__info').append(`<p>You're correct!</p>`);
+    } else {
+        $('.result__info').append(`<p>Wrong this time.</p>`);
+    }
+    $('.result').show();
+}
+function handleSelect() {
+    $('.select').on('click', e => {
+        e.preventDefault();
+        displayResult(checkAnswer(0))
+    })
+}
 
 
 
@@ -47,6 +63,7 @@ function handleQuizAppFuncions() {
     handleButtonClick();
     displayQuestion(0);
     displayAnswers(0);
+    handleSelect();
 }
 
 $(handleQuizAppFuncions())
