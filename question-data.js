@@ -17,7 +17,7 @@ const questionsAnswers = [
             c: '5',
             d: '6'
         },
-        correct: 'b'
+        correct: '3'
     },
     {
         question: 'How many SEC Tournament titles has Kentucky won?',
@@ -27,7 +27,7 @@ const questionsAnswers = [
             c: '22',
             d: '31'
         },
-        correct: 'd'
+        correct: '31'
     },
     {
         question: 'How many SEC Tournament titles have the rest of the SEC won, combined?',
@@ -37,7 +37,7 @@ const questionsAnswers = [
             c: '25',
             d: '17'
         },
-        correct: 'd'
+        correct: '17'
     },
     {
         question: 'How many UK players currently play in the NBA (as of the start of the 2018-19 season)?',
@@ -47,7 +47,7 @@ const questionsAnswers = [
             c: '31',
             d: '36'
         },
-        correct: 'd'
+        correct: '31'
     },
     {
         question: 'What building does UK play its home games in?',
@@ -57,7 +57,7 @@ const questionsAnswers = [
             c: 'Memorial Collesium',
             d: 'Funkhouser Building'
         },
-        correct: 'b'
+        correct: 'Rupp Arena'
     },
     {
         question: 'What year did Kentucky win its most recent NCAA Championship?',
@@ -67,7 +67,7 @@ const questionsAnswers = [
             c: '2015',
             d: '2017'
         },
-        correct: 'b'
+        correct: '2012'
     },
     {
         question: 'How many Final Fours has Kentucky been to?',
@@ -77,7 +77,7 @@ const questionsAnswers = [
             c: '15',
             d: '17'
         },
-        correct: 'd'
+        correct: '17'
     },
     {
         question: 'Which Kentucky Coach did NOT win a Championship while at Kentucky?',
@@ -87,7 +87,7 @@ const questionsAnswers = [
             c: 'John Calipari',
             d: 'Joe B. Hall'
         },
-        correct: 'a'
+        correct: 'Billy Gillispie'
     },
     {
         question: 'How many NCAA Championships has Kentucky won?',
@@ -97,6 +97,6 @@ const questionsAnswers = [
             c: '8',
             d: '9'
         },
-        correct: 'c'
+        correct: '8'
     },
 ]

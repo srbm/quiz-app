@@ -1,3 +1,5 @@
+let questionNumber = 1;
+let score = 0;
 function handleButtonClick() {
     //target button clicked
     //on click
@@ -16,7 +18,6 @@ function hideSections() {
     //show only intro section on start up
     $('.quiz, .result').hide();
 }
-
 function displayQuestion(questionIndex) {
     console.log(`displayQuestion ran`);
     $('.question-number').text(`${questionIndex+1}. ${questionsAnswers[questionIndex].question}`)
@@ -37,18 +38,26 @@ function checkAnswer(questionIndex) {
         return ($('input:checked').val() === questionsAnswers[questionIndex].correct) 
 }
 function displayResult(bool) {
-    $('.quiz').hide();
     if (bool) {
         $('.result__info').append(`<p>You're correct!</p>`);
+        score++;
+        $('.result__info').append(`<p>Score: ${score}/10</p>`);
     } else {
         $('.result__info').append(`<p>Wrong this time.</p>`);
+        $('.result__info').append(`<p>Score: ${score}/10</p>`);
     }
     $('.result').show();
+}
+function iterateQuestion() {
+    return questionNumber++;
 }
 function handleSelect() {
     $('.select').on('click', e => {
         e.preventDefault();
+        $('.quiz').hide();
         displayResult(checkAnswer(0))
+        
+        iterateQuestion();
     })
 }
 
@@ -58,7 +67,7 @@ function handleSelect() {
 
 
 
-function handleQuizAppFuncions() {
+function handleQuizAppFunctions() {
     hideSections();
     handleButtonClick();
     displayQuestion(0);
@@ -66,4 +75,4 @@ function handleQuizAppFuncions() {
     handleSelect();
 }
 
-$(handleQuizAppFuncions())
+$(handleQuizAppFunctions())
