@@ -1,4 +1,4 @@
-let questionNumber = 1;
+let questionNumber = 0;
 let score = 0;
 function handleButtonClick() {
     //target button clicked
@@ -16,16 +16,23 @@ function handleButtonClick() {
 function hideSections() {
     console.log(`hideSections ran`);
     //show only intro section on start up
-    $('.quiz, .result').hide();
+    $('.quiz, .result, .complete').hide();
 }
 function displayQuestion(questionIndex) {
     console.log(`displayQuestion ran`);
+    if ($('.question.number').text()) {
+        $('.question.number').text().remove();
+    }
     $('.question-number').text(`${questionIndex+1}. ${questionsAnswers[questionIndex].question}`)
+    
 }
 function displayAnswers(questionIndex) {
     console.log(`displayAnswers ran`);
     const choices = [];
-    const answersObj = questionsAnswers[questionIndex].answers;    
+    const answersObj = questionsAnswers[questionIndex].answers;
+    if ($('.choices').html()) {
+        $('.choices').empty();
+    }
     for (const answer in answersObj) {
         choices.push(
             `<label>
@@ -38,6 +45,9 @@ function checkAnswer(questionIndex) {
         return ($('input:checked').val() === questionsAnswers[questionIndex].correct) 
 }
 function displayResult(bool) {
+    if($('.result__info').html()) {
+        $('.result__info').empty();
+    }
     if (bool) {
         $('.result__info').append(`<p>You're correct!</p>`);
         score++;
@@ -53,11 +63,25 @@ function iterateQuestion() {
 }
 function handleSelect() {
     $('.select').on('click', e => {
+        console.log("handleSelect ran")
         e.preventDefault();
         $('.quiz').hide();
-        displayResult(checkAnswer(0))
-        
+        displayResult(checkAnswer(questionNumber))
         iterateQuestion();
+    })
+}
+function handleNextQ() {
+    $('.nextQ').on('click', e => {
+        $('.result').hide();
+        if (questionNumber === 10) {
+            $('.col-1').append(`<p>${score} out of 10</p>`)
+            $('.complete').show();
+        } else {
+            displayQuestion(questionNumber);
+            displayAnswers(questionNumber);
+            $('.quiz').show();
+        }
+        
     })
 }
 
@@ -70,9 +94,10 @@ function handleSelect() {
 function handleQuizAppFunctions() {
     hideSections();
     handleButtonClick();
-    displayQuestion(0);
-    displayAnswers(0);
+    displayQuestion(questionNumber);
+    displayAnswers(questionNumber);
     handleSelect();
+    handleNextQ();
 }
 
 $(handleQuizAppFunctions())
