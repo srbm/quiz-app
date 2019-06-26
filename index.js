@@ -57,12 +57,16 @@ function displayResult(bool) {
         $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
     }
     displayImage(questionNumber);
+    displayImageComment(questionNumber);
     $('.result').show();
 }
 function displayImage(questionIndex) {
     $('.js-img').attr('src', `${quizDATA[questionIndex].imageSrc}`);
     $('.js-img').attr('alt', `${quizDATA[questionIndex].imageAlt}`);
-
+}
+function displayImageComment(questionIndex) {
+    console.log(`${quizDATA[questionIndex].comment}`);
+    $('.js-comment').text(`${quizDATA[questionIndex].comment}`);
 }
 function iterateQuestion() {
     return questionNumber++;

@@ -9,7 +9,8 @@ const quizDATA = [
         },
         correct: '1948',
         imageSrc: 'images/rupp.jpg',
-        imageAlt: 'Kentucky head coach, Adolf Rupp, pointing'
+        imageAlt: 'Kentucky head coach, Adolf Rupp, pointing',
+        comment: 'The Cats went on to win an Olympic Gold that year.'
     },
     {
         question: 'How many number 1 NBA draft picks does Kentucky have with John Calipari?',
@@ -21,7 +22,8 @@ const quizDATA = [
         },
         correct: '3',
         imageSrc: 'images/threeNumber1s.jpg',
-        imageAlt: 'Kentucky players John Wall, Anthony Davis and Karl Anthony Towns'
+        imageAlt: 'Kentucky players John Wall, Anthony Davis and Karl Anthony Towns',
+        comment: '3 in 10 years ain\'t bad'
     },
     {
         question: 'How many SEC Tournament titles has Kentucky won?',
@@ -32,8 +34,9 @@ const quizDATA = [
             d: '31'
         },
         correct: '31',
-        imageSrc: 'images/SEC-champs.jpg',
-        imageAlt: '2018 SEC champion, Kentucky Wildcats'
+        imageSrc: 'images/SECchamps.jpg',
+        imageAlt: '2018 SEC champion, Kentucky Wildcats',
+        comment: 'That\'s a lot, ya\'ll'
     },
     {
         question: 'How many SEC Tournament titles have the rest of the SEC won, combined?',
@@ -44,8 +47,9 @@ const quizDATA = [
             d: '17'
         },
         correct: '17',
-        imageSrc: 'images/SEC-schools',
-        imageAlt: 'A map of all the schools in the SEC divided by east/west division'
+        imageSrc: 'images/SEC-schools.jpg',
+        imageAlt: 'A map of all the schools in the SEC divided by east/west division',
+        comment: "Half as many as the Cats."
     },
     {
         question: 'How many UK players currently play in the NBA (as of the start of the 2018-19 season)?',
@@ -57,7 +61,8 @@ const quizDATA = [
         },
         correct: '31',
         imageSrc: 'images/UK31NBA.jpg',
-        imageAlt: 'Collage of several kentucky players in NBA jerserys claiming more players in the 2018-19 NBA than any other shcool'
+        imageAlt: 'Collage of several kentucky players in NBA jerserys claiming more players in the 2018-19 NBA than any other shcool',
+        comment: "I've said it before, that's a lot, ya'll"
     },
     {
         question: 'What building does UK play its home games in?',
@@ -67,7 +72,10 @@ const quizDATA = [
             c: 'Memorial Collesium',
             d: 'Funkhouser Building'
         },
-        correct: 'Rupp Arena'
+        correct: 'Rupp Arena',
+        imageSrc: 'images/rupp-arena.jpg',
+        imageAlt: 'Arial shot of the inside of Rupp Arena. Crowd and banners can be seen.',
+        comment: "If you get a chance to attend a game, don't pass."
     },
     {
         question: 'What year did Kentucky win its most recent NCAA Championship?',
@@ -79,7 +87,8 @@ const quizDATA = [
         },
         correct: '2012',
         imageSrc: 'images/kentucky-national-championship-wins.jpg',
-        imageAlt: 'John Calipari holds the national championship trophy with his team behind him.'
+        imageAlt: 'John Calipari holds the national championship trophy with his team behind him.',
+        comment: "Kentucky also beat rival Louisville in the Final Four on the way to that title."
     },
     {
         question: 'How many Final Fours has Kentucky been to?',
@@ -90,8 +99,9 @@ const quizDATA = [
             d: '17'
         },
         correct: '17',
-        imageSrc: 'images/2020_Final_Four_logo.jpg',
-        imageAlt: '2020 Final Four'
+        imageSrc: 'images/2020_Final_Four_logo.png',
+        imageAlt: '2020 Final Four',
+        comment: 'Only North Carolina has more (20).'
     },
     {
         question: 'Which Kentucky Coach did NOT win a Championship while at Kentucky?',
@@ -103,7 +113,8 @@ const quizDATA = [
         },
         correct: 'Billy Gillispie',
         imageSrc: 'images/billy-g.jpg',
-        imageAlt: 'Former Kentucky coach Billy Gillispie'
+        imageAlt: 'Former Kentucky coach Billy Gillispie',
+        comment: "He was pretty much the worst."
     },
     {
         question: 'How many NCAA Championships has Kentucky won?',
@@ -115,6 +126,7 @@ const quizDATA = [
         },
         correct: '8',
         imageSrc: 'images/8-time-champs.jpg',
-        imageAlt: 'poster of all of Kentucky\'s 8 national championship years'
+        imageAlt: 'poster of all of Kentucky\'s 8 national championship years',
+        comment: "Next year we'll make it 9."
     },
 ]
