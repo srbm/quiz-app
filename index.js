@@ -23,13 +23,13 @@ function displayQuestion(questionIndex) {
     if ($('.question.number').text()) {
         $('.question.number').text().remove();
     }
-    $('.question-number').text(`${questionIndex+1}. ${questionsAnswers[questionIndex].question}`)
+    $('.question-number').text(`${questionIndex+1}. ${quizDATA[questionIndex].question}`)
     
 }
 function displayAnswers(questionIndex) {
     console.log(`displayAnswers ran`);
     const choices = [];
-    const answersObj = questionsAnswers[questionIndex].answers;
+    const answersObj = quizDATA[questionIndex].answers;
     if ($('.choices').html()) {
         $('.choices').empty();
     }
@@ -42,7 +42,7 @@ function displayAnswers(questionIndex) {
     $('.choices').append(choices);
 }
 function checkAnswer(questionIndex) {
-        return ($('input:checked').val() === questionsAnswers[questionIndex].correct) 
+        return ($('input:checked').val() === quizDATA[questionIndex].correct) 
 }
 function displayResult(bool) {
     if($('.result__info').html()) {
@@ -56,7 +56,13 @@ function displayResult(bool) {
         $('.result__info').append(`<p>Wrong this time.</p>`);
         $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
     }
+    displayImage(questionNumber);
     $('.result').show();
+}
+function displayImage(questionIndex) {
+    $('.js-img').attr('src', `${quizDATA[questionIndex].imageSrc}`);
+    $('.js-img').attr('alt', `${quizDATA[questionIndex].imageAlt}`);
+
 }
 function iterateQuestion() {
     return questionNumber++;
@@ -75,7 +81,7 @@ function handleNextQ() {
     $('.nextQ').on('click', e => {
         $('.result').hide();
         if (questionNumber === 10) {
-            $('.col-1').append(`<p>${score} out of 10</p>`)
+            $('.col-md').append(`<p>${score} out of 10</p><a href="https://srbm.github.io/quiz-app"><button type="button">Play Again</button></a>`)
             $('.complete').show();
         } else {
             displayQuestion(questionNumber);

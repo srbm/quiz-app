@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Kentucky History Quiz</title>
         <meta type="description" value="A quiz on Kentucky basketball history.">
         <link href="https://fonts.googleapis.com/css?family=Lora|Muli&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -33,34 +36,47 @@
                     </fieldset>
                 </form>
             </section>
-            <section role="note" class="result">
-                <div class="result__info">
+            <section role="note" class="container result">
+                <div class="row">
+                    <div class="col-md result__info">
 
+                    </div>
+                    <div class="col-md js-img">
+                        <img src="" alt="">
+                    </div>
                 </div>
+                
                 <button type="button" class="nextQ"></button>            
             </section>
-            <section role="doc-conclusion" class="complete">
-                <div class="columns">
-                    <div class="col-1">
+            <section role="doc-conclusion" class="container complete">
+                <div class="row">
+                    <div class="col-md">
                         <h3>You've completed the quiz</h3>
                         <p>You're score is:</p>
-
                     </div>
-                    <div class="col-2">
-                        <img src="images/banner-behavior-rupp-720.jpg" alt="Kentucky basketball banners hanging in Rupp Arena with the #BANNERBEHAVIOR"/>
+                    <div class="col-md">
+                        <img src="images/banner-behavior-rupp-720.jpg" alt="Kentucky basketball banners hanging in Rupp Arena with #BANNERBEHAVIOR"/>
                     </div>
                 </div>
+                
             </section>
         </main>
         <footer>
             <p>Thanks for playing!</p>
             <p>Check out my other projects on <a href="https://github.com/srbm">Github</a></p>
         </footer>
+        <!-- jquery -->
         <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <!-- popper for bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <!-- bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <!-- question and answer data -->
         <script type="application/javascript" src="question-data.js"></script>
+        <!-- functions -->
         <script type="application/javascript" src="index.js"></script>
     </body>
 </html>
