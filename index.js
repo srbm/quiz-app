@@ -51,10 +51,10 @@ function displayResult(bool) {
     if (bool) {
         $('.result__info').append(`<p>You're correct!</p>`);
         score++;
-        $('.result__info').append(`<p>Score: ${score}/10</p>`);
+        $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
     } else {
         $('.result__info').append(`<p>Wrong this time.</p>`);
-        $('.result__info').append(`<p>Score: ${score}/10</p>`);
+        $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
     }
     $('.result').show();
 }
@@ -66,7 +66,8 @@ function handleSelect() {
         console.log("handleSelect ran")
         e.preventDefault();
         $('.quiz').hide();
-        displayResult(checkAnswer(questionNumber))
+        displayResult(checkAnswer(questionNumber));
+        setButtonText(questionNumber);
         iterateQuestion();
     })
 }
@@ -81,8 +82,16 @@ function handleNextQ() {
             displayAnswers(questionNumber);
             $('.quiz').show();
         }
-        
     })
+}
+function setButtonText(questionIndex) {
+    $('.nextQ').text( () => {
+        if(questionIndex < 9) {
+            return "Next Question";
+        } else {
+            return "Complete Quiz";
+        }
+    });
 }
 
 
