@@ -6,23 +6,28 @@ $fontSans: 'Muli', sans-serif;
 body, * {
     box-sizing: border-box;
     font-family: $fontSans;
-    background-color: $wildcatBlue;
-    color: $wildcatWhite;
+}
+body {
+    background-color: $wildcatWhite;
+    color: $wildcatBlack;
 }
 section, footer {
     text-align: center;
-    width: 60%;
-    margin: 30px auto;
+    width: 100vw;
+    padding: 3em 3em 1.5em;
 }
 header {
+    background-color: $wildcatBlue;
+    color: $wildcatWhite;
     width: 100%;
-    padding:  15px 30px;
+    padding:  15px 30px 2em;
     text-align: center;
     .logos {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin: 1.4em 0 2em;
         img {
             height: 80px;
         }
@@ -38,8 +43,20 @@ header {
 h1 {
     font-family: $fontSerif;
 }
+h3 {
+    margin: 0 auto 1.2em;
+}
+.introduction {
+    width: 60%;
+    margin: 0 auto;
+    h2 {
+        margin-bottom: 1.5em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+}
 .quiz {
-    border: 1px solid $wildcatBlack;
     width: 80%;
     margin: 0 auto;
 }
@@ -50,7 +67,7 @@ label {
     display: block;
     padding: 15px 30px;
     margin: 10px auto;
-    width: 70%;
+    width: 50%;
     border: 1px solid $wildcatBlack;
     text-align: left;
 }
@@ -59,10 +76,32 @@ input {
 }
 
 .result {
-    border: 1px solid $wildcatBlack;
-    width: 60%;
+    width: 80%;
     margin: inherit auto;
 }
+.js-img {
+    height: 35vh;
+    border: 2px solid $wildcatBlack;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px $wildcatBlack;
+}
 button {
-    margin: 1em;
+    margin: 2em 1em 0;;
+    color: $wildcatWhite;
+    background-color: $wildcatBlue;
+    padding: 15px 30px;
+    font-size: 1.3em;
+}
+
+footer {
+    color: $wildcatWhite;
+    background-color: $wildcatBlue;
+    a {
+        padding: 5px;
+        color: $wildcatWhite;
+        &:hover {
+            color: $wildcatWhite;
+            background-color: $wildcatBlack;
+        }
+    }
 }

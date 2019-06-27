@@ -1,21 +1,16 @@
-let questionNumber = 0;
+let progress = 0;
 let score = 0;
-function handleButtonClick() {
-    //target button clicked
-    //on click
+function handleStartClick() {
     $('.start-button').on('click', e => {
-        console.log(`handleButtonClick ran`);
-        //prevent default
+        console.log(`handleStartClick ran`);
         e.preventDefault();
-        //hide intro
         $('.introduction').hide();
-        //show display quiz
         $('.quiz').show();
     }); 
 }
 function hideSections() {
     console.log(`hideSections ran`);
-    //show only intro section on start up
+    //show only intro section on load
     $('.quiz, .result, .complete').hide();
 }
 function displayQuestion(questionIndex) {
@@ -41,7 +36,7 @@ function displayAnswers(questionIndex) {
     }
     $('.choices').append(choices);
 }
-function checkAnswer(questionIndex) {
+function isAnswerCorrect(questionIndex) {
         return ($('input:checked').val() === quizDATA[questionIndex].correct) 
 }
 function displayResult(bool) {
@@ -51,13 +46,13 @@ function displayResult(bool) {
     if (bool) {
         $('.result__info').append(`<p>You're correct!</p>`);
         score++;
-        $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
+        $('.result__info').append(`<p>Score: ${score}/${progress+1}</p>`);
     } else {
         $('.result__info').append(`<p>Wrong this time.</p>`);
-        $('.result__info').append(`<p>Score: ${score}/${questionNumber+1}</p>`);
+        $('.result__info').append(`<p>Score: ${score}/${progress+1}</p>`);
     }
-    displayImage(questionNumber);
-    displayImageComment(questionNumber);
+    displayImage(progress);
+    displayImageComment(progress);
     $('.result').show();
 }
 function displayImage(questionIndex) {
@@ -69,27 +64,27 @@ function displayImageComment(questionIndex) {
     $('.js-comment').text(`${quizDATA[questionIndex].comment}`);
 }
 function iterateQuestion() {
-    return questionNumber++;
+    return progress++;
 }
 function handleSelect() {
     $('.select').on('click', e => {
-        console.log("handleSelect ran")
+        console.log("handleSelect ran");
         e.preventDefault();
         $('.quiz').hide();
-        displayResult(checkAnswer(questionNumber));
-        setButtonText(questionNumber);
+        displayResult(isAnswerCorrect(progress));
+        setButtonText(progress);
         iterateQuestion();
     })
 }
 function handleNextQ() {
     $('.nextQ').on('click', e => {
         $('.result').hide();
-        if (questionNumber === 10) {
-            $('.col-md').append(`<p>${score} out of 10</p><a href="https://srbm.github.io/quiz-app"><button type="button">Play Again</button></a>`)
+        if (progress === 10) {
+            $('.col-md').append(`<p>${score} out of 10</p><a href="https://srbm.github.io/quiz-app"><button type="button">Play Again</button></a>`);
             $('.complete').show();
         } else {
-            displayQuestion(questionNumber);
-            displayAnswers(questionNumber);
+            displayQuestion(progress);
+            displayAnswers(progress);
             $('.quiz').show();
         }
     })
@@ -112,11 +107,11 @@ function setButtonText(questionIndex) {
 
 function handleQuizAppFunctions() {
     hideSections();
-    handleButtonClick();
-    displayQuestion(questionNumber);
-    displayAnswers(questionNumber);
+    handleStartClick();
+    displayQuestion(progress);
+    displayAnswers(progress);
     handleSelect();
     handleNextQ();
 }
 
-$(handleQuizAppFunctions())
+$(handleQuizAppFunctions());

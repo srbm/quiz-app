@@ -23,7 +23,7 @@ const quizDATA = [
         correct: '3',
         imageSrc: 'images/threeNumber1s.jpg',
         imageAlt: 'Kentucky players John Wall, Anthony Davis and Karl Anthony Towns',
-        comment: '3 in 10 years ain\'t bad'
+        comment: 'John Wall, Anthony Davis and Karl Anthony Towns'
     },
     {
         question: 'How many SEC Tournament titles has Kentucky won?',
@@ -88,7 +88,7 @@ const quizDATA = [
         correct: '2012',
         imageSrc: 'images/kentucky-national-championship-wins.jpg',
         imageAlt: 'John Calipari holds the national championship trophy with his team behind him.',
-        comment: "Kentucky also beat rival Louisville in the Final Four on the way to that title."
+        comment: "Kentucky beat rival Louisville in the Final Four en route to that title."
     },
     {
         question: 'How many Final Fours has Kentucky been to?',
@@ -101,7 +101,7 @@ const quizDATA = [
         correct: '17',
         imageSrc: 'images/2020_Final_Four_logo.png',
         imageAlt: '2020 Final Four',
-        comment: 'Only North Carolina has more (20).'
+        comment: 'Only North Carolina has more at 20.'
     },
     {
         question: 'Which Kentucky Coach did NOT win a Championship while at Kentucky?',
@@ -127,6 +127,6 @@ const quizDATA = [
         correct: '8',
         imageSrc: 'images/8-time-champs.jpg',
         imageAlt: 'poster of all of Kentucky\'s 8 national championship years',
-        comment: "Next year we'll make it 9."
+        comment: `Next year we'll make it 9.\n-Every Cats fan since 2012`
     },
 ]
