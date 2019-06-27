@@ -78,12 +78,19 @@ input {
 .result {
     width: 80%;
     margin: inherit auto;
+    &__info {
+        font-size: 2em;
+    }
 }
 .js-img {
     height: 35vh;
     border: 2px solid $wildcatBlack;
     border-radius: 2px;
     box-shadow: 0 2px 4px $wildcatBlack;
+}
+.js-comment {
+    white-space: pre-line;
+    font-size: 1.3em;
 }
 button {
     margin: 2em 1em 0;;

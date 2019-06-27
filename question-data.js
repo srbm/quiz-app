@@ -127,6 +127,6 @@ const quizDATA = [
         correct: '8',
         imageSrc: 'images/8-time-champs.jpg',
         imageAlt: 'poster of all of Kentucky\'s 8 national championship years',
-        comment: `Next year we'll make it 9.\n-Every Cats fan since 2012`
+        comment: `Next year we'll make it 9.\n\u0336Every Cats fan since 2012`
     },
 ]
