@@ -14,28 +14,44 @@ body {
 section, footer {
     text-align: center;
     width: 100vw;
-    padding: 3em 3em 1.5em;
+    padding: 1em 1em .75em;
+    @media screen and (min-width: 650px) {
+        padding: 3em 3em .75em;
+    }
 }
 header {
     background-color: $wildcatBlue;
     color: $wildcatWhite;
     width: 100%;
-    padding:  15px 30px 2em;
+    padding:  15px 10px 2em;
     text-align: center;
+    @media screen and (min-width: 650px) {
+        padding: 15px 30px 2em;
+    }
     .logos {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 1.4em 0 2em;
+        margin: 0 0 2em;
         img {
-            height: 80px;
+            height: 60px;
+            @media screen and (min-width: 650px) {
+                height: 80px;
+            }
         }
         p {
             font-family: $fontSerif;
-            font-size: 2em;
+            font-size: 1.3em;
             border: 1px solid $wildcatWhite;
             padding: 5px 10px;
+            margin: 0;
+            @media screen and (min-width: 650px) {
+                font-size: 2em;
+            }
+        }
+        @media screen and (min-width: 650px) {
+            margin: 1.4em 0 2em;
         }
     }
     
@@ -47,18 +63,27 @@ h3 {
     margin: 0 auto 1.2em;
 }
 .introduction {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
+    @media screen and (min-width: 650px) {
+        width: 60%;
+    }
     h2 {
         margin-bottom: 1.5em;
     }
     p {
-        font-size: 1.3em;
+        font-size: 1em;
+        @media screen and (min-width: 650px) {
+            font-size: 1.3;
+        }
     }
 }
 .quiz {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    @media screen and (min-width: 650px) {
+        width: 80%;
+    }
 }
 .row {
     align-items: center;
@@ -70,26 +95,35 @@ label {
     display: block;
     padding: 15px 30px;
     margin: 10px auto;
-    width: 50%;
+    width: 80%;
     border: 1px solid $wildcatBlack;
     text-align: left;
+    @media screen and (min-width: 650px) {
+        width: 50%;
+    }
 }
 input {
     margin-right: 10px;
 }
 
 .result {
-    width: 80%;
+    width: 100%;
     margin: inherit auto;
     &__info {
         font-size: 2em;
     }
+    @media screen and (min-width: 650px) {
+        width: 80%;
+    }
 }
 .js-img {
-    height: 35vh;
+    height: 29vh;
     border: 2px solid $wildcatBlack;
     border-radius: 2px;
     box-shadow: 0 2px 4px $wildcatBlack;
+    @media screen and (min-width: 650px) {
+        height: 29vh;
+    }
 }
 .js-comment {
     white-space: pre-line;
@@ -98,12 +132,18 @@ input {
 .complete__text {
     font-size: 2em;
 }
+.complete__img img{
+    height: 28vh;
+}
 button {
-    margin: 2em 1em 0;;
+    margin: 15px 1em 0;;
     color: $wildcatWhite;
     background-color: $wildcatBlue;
     padding: 15px 30px;
     font-size: 1.3em;
+    @media screen and (min-width: 650px) {
+        margin: 2em 1em 0;
+    }
 }
 
 footer {
