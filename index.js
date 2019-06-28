@@ -43,13 +43,18 @@ function displayResult(bool) {
     if($('.result__info').html()) {
         $('.result__info').empty();
     }
+
     if (bool) {
         $('.result__info').append(`<p>You're correct!</p>`);
         score++;
-        $('.result__info').append(`<p>Score: ${score}/${progress+1}</p>`);
+        $('.result__info').append(`
+            <p>After ${progress+1} ${(progress+1 === 1) ? "question" : "questions"}, your score is:
+            <p>${score}/10</p>`);
     } else {
         $('.result__info').append(`<p>Wrong this time.</p>`);
-        $('.result__info').append(`<p>Score: ${score}/${progress+1}</p>`);
+        $('.result__info').append(`
+            <p>After ${progress+1} ${(progress+1 === 1) ? "question" : "questions"}, your score is:
+            <p>${score}/10</p>`);
     }
     displayImage(progress);
     displayImageComment(progress);
@@ -80,7 +85,9 @@ function handleNextQ() {
     $('.nextQ').on('click', e => {
         $('.result').hide();
         if (progress === 10) {
-            $('.col-md').append(`<p>${score} out of 10</p><a href="https://srbm.github.io/quiz-app"><button type="button">Play Again</button></a>`);
+            addFinishedQuizComment(score);
+            $('.complete__text').append(`<p>${score} out of 10</p>`);
+            $('.complete').append(`<a href="https://srbm.github.io/quiz-app"><button type="button">Play Again</button></a>`);
             $('.complete').show();
         } else {
             displayQuestion(progress);
@@ -97,6 +104,17 @@ function setButtonText(questionIndex) {
             return "Complete Quiz";
         }
     });
+}
+function addFinishedQuizComment(playerScore) {
+    if (playerScore === 10) {
+        $('.complete__text').prepend(`<h3>Wow, you really know your Cats!</h3>`);
+    } else if (playerScore > 6) {
+        $('.complete__text').prepend(`<h3>You don't have to be perfect to win the game. Nice job!</h3>`);
+    } else if (playerScore > 3) {
+        $('.complete__text').prepend(`<h3>You've got some work to do but you can still be ready by March</h3>`);
+    } else {
+        $('.complete__text').prepend(`<h3>Back to the practice floor for sprints.</h3>`);
+    }
 }
 
 

@@ -49,6 +49,9 @@ h3 {
   width: 80%;
   margin: 0 auto; }
 
+.row {
+  align-items: center; }
+
 fieldset {
   border: none; }
 
@@ -78,6 +81,9 @@ input {
 .js-comment {
   white-space: pre-line;
   font-size: 1.3em; }
+
+.complete__text {
+  font-size: 2em; }
 
 button {
   margin: 2em 1em 0;
