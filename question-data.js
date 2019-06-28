@@ -35,7 +35,7 @@ const quizDATA = [
         },
         correct: '31',
         imageSrc: 'images/SECchamps.jpg',
-        imageAlt: '2018 SEC champion, Kentucky Wildcats',
+        imageAlt: '2016 SEC champion, Kentucky Wildcats',
         comment: 'That\'s a lot, ya\'ll'
     },
     {
