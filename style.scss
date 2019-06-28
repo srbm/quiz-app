@@ -8,7 +8,8 @@ body, * {
     font-family: $fontSans;
 }
 body {
-    background-color: $wildcatWhite;
+    height: 100vh;
+    background-color: $wildcatBlue;
     color: $wildcatBlack;
 }
 section, footer {
@@ -18,6 +19,9 @@ section, footer {
     @media screen and (min-width: 650px) {
         padding: 3em 3em .75em;
     }
+}
+main {
+    background-color: $wildcatWhite;
 }
 header {
     background-color: $wildcatBlue;
