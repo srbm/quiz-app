@@ -54,13 +54,15 @@ header {
             margin: 1.4em 0 2em;
         }
     }
-    
 }
 h1 {
     font-family: $fontSerif;
 }
 h3 {
     margin: 0 auto 1.2em;
+}
+.quiz, .result, .complete {
+    display: none;
 }
 .introduction {
     width: 100%;

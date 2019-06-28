@@ -53,6 +53,9 @@ h1 {
 h3 {
   margin: 0 auto 1.2em; }
 
+.quiz, .result, .complete {
+  display: none; }
+
 .introduction {
   width: 100%;
   margin: 0 auto; }

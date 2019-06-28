@@ -3,23 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="A quiz on Kentucky basketball history.">
         <title>Kentucky History Quiz</title>
-        <meta type="description" value="A quiz on Kentucky basketball history.">
         <link href="https://fonts.googleapis.com/css?family=Lora|Muli&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header role="banner">
+        <header>
             <div class="logos">
                 <img src="images/uk-lockup--white.png" alt="University of Kentucky">
                 <p>SRBM</p>
             </div>
             <h1>University of Kentucky Men's Basketball Quiz</h1>
         </header>
-        <main role="main">
-            <section role="presentation" class="introduction">
+        <main>
+            <section role="region" class="introduction">
                 <div class="description">
                     <h2>Go Cats!</h2>
                     <p>Kentucky has the greatest tradition in the history of college basketball. Named Team of the  20th Century by Dick Vitale, the Cats can boast about sustained excellence.</p>
@@ -30,28 +30,28 @@
             <section role="form" class="quiz">
                 <form action="#" method="POST">
                     <fieldset>
-                        <h3 class="question-number"></h3>
+                        <h3 class="question-number">1.</h3>
                         <div class="choices">
                         </div>
                         <button type="submit" class="select">Select</button>
                     </fieldset>
                 </form>
             </section>
-            <section role="note" class="container result">
+            <section role="region" class="container result">
                 <div class="row">
                     <div class="col-md">
                         <div class="result__info"></div>
                         <p class="js-comment"></p>
                     </div>
                     <div class="col-md">
-                        <img class="js-img" src="" alt="">
+                        <img class="js-img" src="images/rupp.jpg" alt="Adolph Rupp">
                        
                     </div>
                 </div>
                 
                 <button type="button" class="nextQ"></button>            
             </section>
-            <section role="doc-conclusion" class="container complete">
+            <section role="region" class="container complete">
                 <div class="row">
                     <div class="col-md complete__text">
                         <p>You're score is:</p>
@@ -77,8 +77,8 @@
         <!-- bootstrap -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
             <!-- question and answer data -->
-        <script type="application/javascript" src="question-data.js"></script>
+        <script src="question-data.js"></script>
         <!-- functions -->
-        <script type="application/javascript" src="index.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
