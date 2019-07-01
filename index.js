@@ -21,14 +21,17 @@ function handleQuizAppFunctions() {
         console.log(`displayAnswers ran`);
         const choices = [];
         const answersObj = quizDATA[questionIndex].answers;
+        let count = 0;
         if ($('.choices').html()) {
             $('.choices').empty();
         }
         for (const answer in answersObj) {
+
             choices.push(
-                `<label>
-                    <input type="radio" name="choice" value="${answersObj[answer]}" required>${answersObj[answer]}
-                </label>`);   
+                `<label for="choice">
+                    <input type="radio" name="choice" value="${answersObj[answer]}" >${answersObj[answer]}
+                </label>`);
+            count++;   
         }
         $('.choices').append(choices);
     }
